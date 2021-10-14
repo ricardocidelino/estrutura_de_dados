@@ -1,0 +1,32 @@
+#include <iostream>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+using namespace std;
+
+int soma(int a, int b);
+int quad(int c);
+int somaquad(int d, int e);
+
+int main(int argc, char *argv[])
+{
+    int x, y;
+    cin>>x>>y;//2  3
+    
+    cout<<somaquad(x,y)<<"\n"; //13
+    
+    
+    
+    return 0;
+}
+
+int soma(int a, int b){
+    return a+b;  
+}
+int quad(int c){
+    return c*c;   
+}
+int somaquad(int d, int e){ 
+    
+    return soma(quad(d), quad(e));
+    			   	       
+}
