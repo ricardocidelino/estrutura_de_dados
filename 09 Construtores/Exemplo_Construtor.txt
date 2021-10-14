@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+class Triangulo{
+	
+       float PI;
+      
+	  public:
+             int a, b, c;
+             float r;
+             
+             
+                     
+      Triangulo(){
+    	
+    		a=1;
+    		b=1;
+    		c=1;
+    		PI=3.14;
+	 }
+	  Triangulo(int a1, int b1, int c1){
+	  		
+	  		a=a1;
+	  		b=b1;
+	  		c=c1;
+			PI=3.14;	  		
+	  	
+	  }
+	                  
+      private bool verifica(){
+          if(a<b+c && b<a+c && c<a+b)
+          return 1;
+          else
+          return 0;
+          }
+          
+      string tipo(){
+          if(verifica()==1){
+             if(a==b && b==c)
+                     return " Triangulo equilatero ";
+             else if(a==b || b==c || c==a)
+                     return " Triangulo isosceles ";
+             else
+                     return " Triangulo escaleno ";
+                            
+                            }
+          else {
+               
+                     return " Nao forma triangulo ";
+               
+               }
+          }
+          
+      
+           
+      };
+
+int main(int argc, char *argv[])
+{
+    Triangulo Obj(2,2,3);
+    Triangulo QA;
+    cout<<QA.tipo()<<"\n";
+            
+    //cout<<Obj.tipo()<<"\n";
+    return 0;
+}
